@@ -29,6 +29,26 @@ Then descend into the detail. Never open on the detail and hope the reader recon
 
 Descend gradually. 40,000 feet (the goal) → 10,000 feet (this piece's job) → ground level (what you found). Do not jump from the goal straight to a line number.
 
+### What altitude actually looks like
+
+The rule is easy to nod along to and hard to do. Here is the same finding, twice.
+
+**Ground level — technically accurate, and useless to the reader:**
+
+> The seed file had the supplier rate at 240. The live table is read separately at runtime, so the running app was unaffected. I've corrected it to 210 and opened a pull request.
+
+Every word is true. The reader has no idea whether to care.
+
+**With altitude — same facts, same length:**
+
+> You pay each supplier a set rate per order. Getting that number wrong means paying the wrong amount, so it's worth knowing when it drifts.
+>
+> One had drifted: a leftover file still said £240 after you agreed £210. **The good news is it was a stale copy, not the number the system actually bills from — so nobody was ever charged wrongly.** I've corrected it anyway, because the next person to read that file would have believed it.
+
+The second version answers "why should I care" before saying what happened. Note the order: goal, then reassurance, then the detail. A reader who stops after two sentences still leaves with the right impression.
+
+**The tell:** if your first sentence contains a filename, a function name, or a number, you started at ground level. Move it to sentence three.
+
 ### Where this fails in practice
 
 The rule is easiest to follow on a single big report and easiest to drop during a long, fast, mechanical session — reviewing several PRs back to back, checking a board repeatedly, cross-referencing card numbers and commit SHAs. Each individual message feels like "just an update," not "an explanation," so the instinct to add altitude doesn't fire — even though the reader's context gap is exactly the same as it would be in a single big report. **Mechanical does not mean the reader needs less altitude. It usually means they need it restated more often, because the thread is getting longer, not shorter.**
@@ -56,6 +76,18 @@ Findings and actions are different things. Do not braid them.
 
 **7. Never soften a real problem into vagueness.**
 Simple does not mean gentle. "This will break again next month" is simple AND direct. Say the hard thing in short words.
+
+**8. The plain version should be SHORTER. Usually much shorter.**
+This is the rule most often broken, because every other rule in this file adds words — altitude adds a paragraph, metaphors add a sentence, glossing jargon adds a clause. Left unchecked, "plain English" becomes a longer document that is merely easier to read, which is not the goal. The goal is that they finish it.
+
+Working targets, not laws:
+- **A status update: under 200 words.** If it needs more, it is two updates.
+- **A finding or a decision: one screen.** They should not scroll to reach the ask.
+- **Never more than three headings** unless the reader explicitly asked for a full report.
+
+Simplifying means *choosing what to leave out*. If your plain version is longer than the technical one, you translated but never chose. Go back and cut — the detail you are protecting is almost always for your benefit, not theirs.
+
+**The cut test:** delete your longest paragraph. If the reader can still act correctly, leave it deleted.
 
 ## Metaphors
 
@@ -107,11 +139,43 @@ In a long working session you will drift back down into jargon without noticing,
 | Burying the ask in paragraph four | Ask in its own line, near the top |
 | Hedging so hard nothing is claimed | State it, then state your confidence separately |
 
+## Mixed audiences
+
+The rules above assume one reader. Often there is more than one — an email to a founder and their engineer, a PR description read by a reviewer today and a non-technical colleague next quarter, a report the recipient will forward.
+
+**Write for the least-loaded reader, then add the detail underneath — never the reverse.** A technical reader skims a plain opening in three seconds and loses nothing. A non-technical reader hits a technical opening and stops entirely. The costs are wildly unequal, so the tie always breaks the same way.
+
+The shape that serves both:
+
+1. **Plain summary first** — the altitude, the finding, the ask. Everyone reads this.
+2. **Detail below, clearly labelled** — "the specifics" or "what I changed". The technical reader drops into this; the other reader stops at the line above and has still got what they need.
+3. **Never split it into two documents.** Two versions drift, and the wrong person gets the wrong one.
+
+**When you can't tell who is reading:** assume non-technical. Being over-explained is a mild irritation; being lost is a dead end.
+
+**One exception.** If the artifact is *only* ever read by specialists — a code comment, a runbook step, a commit message — write it for them properly. Plain language is a service to the reader, not a costume; simplifying past the point of precision is its own failure.
+
 ## Two things simple language must never cost
 
 **Accuracy.** Simplifying is choosing what to leave out, never changing what is true. If the simple version would mislead, add a sentence — do not shrug.
 
 **The unwelcome part.** The reason to simplify is so the reader can act. That includes acting on bad news. Never let plain language soften a risk, a cost, or a mistake you made. Short words make hard news clearer, not softer.
+
+## Declare That You Used It
+
+Whenever you genuinely apply this skill, end your response with one compact line:
+
+```
+Skills used: simple-language
+```
+
+If other declaring skills fired in the same turn, combine them on that **one** comma-separated line: `Skills used: simple-language, world-class`.
+
+This belongs to the skill, not to any one host, so it holds the same in Claude Code, Codex, Grok, or a manual invocation. Three conditions, all required:
+
+- **Only when genuinely used.** Never as decoration. If you correctly skipped the skill — a technical reader who asked for detail, a one-line answer — there is no tag, and that silence is information too.
+- **Never instead of the work.** The tag is a receipt, not a substitute for actually writing plainly.
+- **One line, at the very end.** A footer, not a heading.
 
 ## Worked example
 
