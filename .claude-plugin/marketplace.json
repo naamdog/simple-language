@@ -1,0 +1,11 @@
+{
+  "name": "simple-language",
+  "owner": { "name": "Mike Naameh" },
+  "plugins": [
+    {
+      "name": "simple-language",
+      "source": "./",
+      "description": "Explains technical work, findings, and decisions to non-technical readers in plain language - activates automatically via a UserPromptSubmit hook."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "simple-language",
+  "version": "0.1.0",
+  "description": "Explains technical work, findings, and decisions to non-technical readers in plain language - leads with the big picture, cuts jargon, and never softens the bad news. Activates automatically on every turn via a hook.",
+  "author": { "name": "Mike Naameh" },
+  "license": "MIT",
+  "category": "productivity",
+  "keywords": ["communication", "plain-language", "writing", "explanations", "hooks"]
+}
