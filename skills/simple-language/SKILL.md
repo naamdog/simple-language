@@ -161,21 +161,33 @@ The shape that serves both:
 
 **The unwelcome part.** The reason to simplify is so the reader can act. That includes acting on bad news. Never let plain language soften a risk, a cost, or a mistake you made. Short words make hard news clearer, not softer.
 
-## Declare That You Used It
+## Declare That You Used It — the run box
 
-Whenever you genuinely apply this skill, end your response with one compact line:
+When you genuinely apply this skill, end your response with the **run box**: a fenced code block, visually separate from the reply, carrying one row per skill that actually ran.
 
 ```
-Skills used: simple-language
+╭─────────────────────────────────────────────────
+│ SKILLS       simple-language · world-class
+│ CHEAP TRICK  5 stages → 1 delegated (haiku), 3 kept, 1 inline
+│ SMART METER  91% · bar 85% irreversible · clears · Opus/high
+╰─────────────────────────────────────────────────
 ```
 
-If other declaring skills fired in the same turn, combine them on that **one** comma-separated line: `Skills used: simple-language, world-class`.
+**Why a box.** The read-out is a receipt about the machinery, not part of the answer. Boxing it means the reader can see at a glance where the reply ends and the instrumentation begins, and skip it entirely when they don't care.
 
-This belongs to the skill, not to any one host, so it holds the same in Claude Code, Codex, Grok, or a manual invocation. Three conditions, all required:
+**How to build it:**
 
-- **Only when genuinely used.** Never as decoration. If you correctly skipped the skill — a technical reader who asked for detail, a one-line answer — there is no tag, and that silence is information too.
-- **Never instead of the work.** The tag is a receipt, not a substitute for actually writing plainly.
-- **One line, at the very end.** A footer, not a heading.
+- **One row per skill that genuinely ran. Omit the row entirely if it didn't.** A three-row box on a turn where one skill fired is a lie.
+- `SKILLS` lists the declaring skills that ran, separated by ` · `. Drop the row if none did.
+- Other tools add their own row (`CHEAP TRICK`, `SMART METER`) with their own content — this box is the shared container, not this skill's property.
+- **No right-hand border.** Deliberate: a box that needs exact padding gets mis-padded eventually. Left rail only, and it renders correctly every time.
+- Always inside a fenced code block, always the very last thing in the response.
+
+Three conditions, all required:
+
+- **Only when genuinely used.** Never as decoration. If you correctly skipped the skill — a technical reader who asked for detail, a one-line answer — there is no row, and that silence is information too.
+- **Never instead of the work.** The box is a receipt, not a substitute for actually writing plainly.
+- **Last thing in the response.** A footer, not a heading.
 
 ## Worked example
 
