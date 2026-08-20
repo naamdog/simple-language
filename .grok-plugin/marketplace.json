@@ -7,11 +7,18 @@
   "plugins": [
     {
       "name": "simple-language",
-      "source": "./",
-      "description": "Explains technical work, findings, and decisions to non-technical readers in plain language. Activates automatically via a UserPromptSubmit hook.",
+      "source": {
+        "type": "local",
+        "path": "./grok"
+      },
+      "description": "Explains technical work, findings, and decisions to non-technical readers in plain language. Installs the skill, plus a one-time /simple-language-setup command that writes the always-on rules file.",
       "category": "productivity",
       "homepage": "https://github.com/naamdog/simple-language",
-      "keywords": ["simple language", "plain english", "explanations"]
+      "keywords": [
+        "simple language",
+        "plain english",
+        "explanations"
+      ]
     }
   ]
 }

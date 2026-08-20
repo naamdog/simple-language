@@ -1,0 +1,11 @@
+{
+  "name": "simple-language",
+  "plugins": [
+    {
+      "name": "simple-language",
+      "source": { "source": "local", "path": "./plugins/simple-language" },
+      "policy": { "installation": "AVAILABLE" },
+      "category": "productivity"
+    }
+  ]
+}

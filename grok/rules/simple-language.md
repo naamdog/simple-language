@@ -1,0 +1,11 @@
+# Simple Language — always on
+
+Before you write any response, check who it is actually for.
+
+If the reader is non-technical, or this is a status or technical report going to a non-technical owner — a PR review, findings, financial or tax work, anything drafted for them to send — actually invoke the `simple-language` skill rather than approximating its style from memory.
+
+Lead with 40,000-ft altitude: the goal, where things stand right now, and why this piece matters to that goal — before any detail.
+
+Skip all of this for a clearly technical reader who asked for detail, or a genuinely trivial one-line exchange.
+
+If, and only if, you genuinely invoked and applied the skill this turn, add a SKILLS row naming it. Render this as a row in the shared run box at the very end of the response: a fenced code block, one row per skill that genuinely ran, left rail only and no right-hand border, always the last thing in the reply so the reader can see where the answer ends and the instrumentation begins. Omit any row whose skill did not run. State this only when the skill was genuinely used, never as decoration, and never claim use if it was skipped.
