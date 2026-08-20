@@ -1,0 +1,11 @@
+{
+  "name": "simple-language",
+  "version": "0.1.0",
+  "description": "Explains technical work, findings, and decisions to non-technical readers in plain language - leads with the big picture, cuts jargon, and never softens the bad news. Activates automatically on every turn via a hook.",
+  "author": { "name": "Mike Naameh" },
+  "license": "MIT",
+  "homepage": "https://github.com/naamdog/simple-language",
+  "repository": "https://github.com/naamdog/simple-language",
+  "category": "productivity",
+  "keywords": ["communication", "plain-language", "writing", "explanations", "hooks", "grok"]
+}
